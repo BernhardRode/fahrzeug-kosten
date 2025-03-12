@@ -23,7 +23,7 @@ const initialState = loadState() || {
   oneTimePayment: 5000,
   monthlyCost: 432,
   includedKm: 15000,
-  extraKmCost: 0.824,
+  extraKmCost: 0.0824,
   officeKm: 82,
   officeDays: 110, // Actual driving days per year
   taxOfficeDays: 220, // Tax-declared office days per year
