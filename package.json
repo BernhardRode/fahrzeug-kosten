@@ -3,34 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://bernhardrode.github.io/fahrzeug-kosten",
+  "type": "module",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^13.5.0",
     "chart.js": "^4.4.8",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
-    "react-scripts": "5.0.1",
-    "redux": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "redux": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "deploy": "gh-pages -d dist",
+    "serve": "vite preview --port 3000",
+    "serve:github": "BASE_URL=/fahrzeug-kosten/ npm run build && vite preview --port 3000"
   },
   "browserslist": {
     "production": [
@@ -45,6 +35,20 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^6.2.0"
   }
 }

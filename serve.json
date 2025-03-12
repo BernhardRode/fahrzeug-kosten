@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/fahrzeug-kosten/**", "destination": "/index.html" },
+    { "source": "/**", "destination": "/index.html" }
+  ],
+  "trailingSlash": true
+}

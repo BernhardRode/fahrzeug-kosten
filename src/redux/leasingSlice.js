@@ -14,20 +14,26 @@ const loadState = () => {
   }
 };
 
+// Get current date for default values
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
 const initialState = loadState() || {
   leasingDuration: 36,
   oneTimePayment: 5000,
-  monthlyCost: 400,
+  monthlyCost: 432,
   includedKm: 15000,
   extraKmCost: 0.824,
-  officeKm: 20,
-  officeDays: 220, // Actual driving days per year
+  officeKm: 82,
+  officeDays: 110, // Actual driving days per year
   taxOfficeDays: 220, // Tax-declared office days per year
   fixedKmPerYear: 10000, // Additional fixed kilometers per year (not for tax)
   taxReturn: 0.30,
-  energyConsumption: 20.0, // kWh per 100km (WLTP)
+  energyConsumption: 22.0, // kWh per 100km (WLTP)
   energyCost: 0.38, // € per kWh
-  insuranceCostPerYear: 1000, // Insurance costs per year
+  insuranceCostPerYear: 948, // Insurance costs per year
+  startMonth: 5, // Start month (1-12)
+  startYear: currentYear, // Start year
 };
 
 export const leasingSlice = createSlice({
@@ -73,6 +79,12 @@ export const leasingSlice = createSlice({
     updateInsuranceCostPerYear: (state, action) => {
       state.insuranceCostPerYear = action.payload;
     },
+    updateStartMonth: (state, action) => {
+      state.startMonth = action.payload;
+    },
+    updateStartYear: (state, action) => {
+      state.startYear = action.payload;
+    },
   },
 });
 
@@ -99,7 +111,9 @@ export const {
   updateTaxReturn,
   updateEnergyConsumption,
   updateEnergyCost,
-  updateInsuranceCostPerYear
+  updateInsuranceCostPerYear,
+  updateStartMonth,
+  updateStartYear
 } = leasingSlice.actions;
 
 export default leasingSlice.reducer;
