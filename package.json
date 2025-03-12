@@ -1,8 +1,8 @@
 {
-  "name": "fahrzeug-kosten-react",
+  "name": "fahrzeug-kosten",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ebborode.github.io/fahrzeug-kosten-react",
+  "homepage": "https://bernhardrode.github.io/fahrzeug-kosten",
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "@testing-library/dom": "^10.4.0",
