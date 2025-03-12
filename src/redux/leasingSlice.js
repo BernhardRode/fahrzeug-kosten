@@ -31,7 +31,7 @@ const initialState = loadState() || {
   taxReturn: 0.30,
   energyConsumption: 22.0, // kWh per 100km (WLTP)
   energyCost: 0.38, // € per kWh
-  insuranceCostPerYear: 948, // Insurance costs per year
+  insuranceCostPerYear: 790, // Insurance costs per year
   startMonth: 5, // Start month (1-12)
   startYear: currentYear, // Start year
 };
